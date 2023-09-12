@@ -1,0 +1,91 @@
+body {
+  height: 100vh;
+  background: rgb(228, 233, 253);
+  background: linear-gradient(
+    208deg,
+    rgba(228, 233, 253, 1) 51%,
+    rgba(166, 131, 227, 1) 51%
+  );
+  display: block;
+ 
+}
+
+input:checked + span {
+  text-decoration: line-through;
+}
+.current-day {
+  background-color: rgba(166, 131, 227, 1);
+  color: white;
+  width: 35%;
+  padding: 1%;
+  border-radius: 6px;
+  font-size: 38px;
+  font-weight: 700;
+  text-align: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90%;
+}
+header a {
+  height: 10vh;
+  color: #551a8b;
+  font-size: 30px;
+  text-decoration: none;
+  margin-right: 1%;
+}
+header {
+  margin: 2%;
+
+}
+.task-list {
+  margin-top: 20px;
+  background-color: #f8fbfe;
+  padding: 1%;
+  width: 35%;
+  border-radius: 5px;
+}
+.task-list > li {
+  color: #551a8b;
+  border-bottom: 1px solid #f1f1f1;
+  padding: 3%;
+  font-weight: 400;
+  font-size: 28px;
+}
+.task-list > li > span {
+  margin-left: 25px;
+}
+.task-list > li > input {
+  border: 2px solid red;
+  height: max-content;
+
+}
+.task-list > form {
+  display: flex;
+  align-items: center;
+  height: 5vh;
+  justify-content: center;
+}
+
+.task-list > form > input {
+  padding: 3%;
+  font-size: 20px;
+  border: none;
+  background-color: #f8fbfe;
+}
+
+.task-list > form > button {
+  background-color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  color: #551a8b;
+  border: none;
+}
+
+footer{
+    font-size: 24px;
+    margin-left: 2%;
+}

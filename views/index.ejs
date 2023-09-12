@@ -1,0 +1,40 @@
+<%- include("partials/header.ejs") %>
+<header>
+
+  <a href="/"><%=listTittle %></a>
+ 
+</header>
+<div class="task-list">
+  
+  <% if (locals.task) { %> <% task.forEach((element) => { %>
+  
+  <form action="/delete" method="post">
+    <li style="list-style: none">
+      <input type="checkbox" name="checkbox" value=<%= element.id %> onchange="this.form.submit()" />
+
+      <span> <%= element.name %> </span>
+    </li>
+    <input type="hidden" name="listname" value="<%=listTittle %>">
+      
+  </form>
+  <% }) %> <% } %>
+
+  <form className="inputForm" action="/" method="post">
+    <input type="text" name="todo" id="todo" placeholder="New Item" />
+    <button type="submit" name="addBtn" value="<%=listTittle%>">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="50"
+        height="50"
+        fill="currentColor"
+        class="bi bi-plus-circle-fill"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"
+        />
+      </svg>
+    </button>
+  </form>
+</div>
+<%- include("partials/footer.ejs") %>
